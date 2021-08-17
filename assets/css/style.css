@@ -230,6 +230,15 @@ input{
     right: 0;
 }
 
+.scroll-header{
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px hsla(var(--hue-color), 100%, 37%, .15);
+}
+
+.scroll-header .nav__logo, .scroll-header .nav__toggle{
+    color:var(--title-color);
+}
+
 .home__img{
     position: absolute;
     top:0;
