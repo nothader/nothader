@@ -31,6 +31,7 @@ function linkAction(){
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+// CHANGE BACKGROUND HEADER
 function scrollHeader(){
     const header = document.getElementById('header');
     // When scroll is greater than 100 viewport height, add the scroll-header class
@@ -39,3 +40,18 @@ function scrollHeader(){
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+// SWIPER DISCOVER
+// Initialize Swiper
+
+var swiper = new Swiper(".discover__container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop:true,
+    spaceBetween: 32, 
+    coverflowEffect: {
+      rotate: 0,
+    },
+  });
