@@ -17,6 +17,11 @@
     --scroll-bar-color:hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
     --home-info:linear-gradient(to top, #0979b7 0%, #ebf4fc 100%);
+    --rating-color: #e49f44;
+    --facebook-color:#3a5898;
+    --instagram-color:#fe3464;
+    --twitter-color:#55d4fd;
+
 
     /* font-family */
     --body-font:'Open Sans', sans-serif;
@@ -283,15 +288,15 @@ input{
 }
 
 #facebook:hover{
-    color: #3a5898;
+    color: var(--facebook-color);
 }
 
 #instagram:hover{
-    color:#fe3464;
+    color:var(--instagram-color);
 }
 
 #twitter:hover{
-    color:#55d4fd;
+    color:var(--twitter-color);
 }
 
 .home__info{
@@ -544,22 +549,23 @@ input{
     padding: .75rem .75rem 1rem;
 }
 
+.place__users{
+    font-size: var(--small-font-size);
+}
+
 .place__rating{
     align-self: flex-end;
     display: flex;
     align-items: center;
     font-weight: var(--font-semi-bold);
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
-.place__rating:hover{
-    color:var(--first-color);
-}
 
 .place__rating-icon{
     font-size: .75rem;
     margin-right: var(--mb-0-25);
+    color:var(--rating-color);
 }
 
 .place__rating-number{
@@ -577,7 +583,7 @@ input{
 
 .place__subtitle{
     font-size: var(--smaller-font-size);
-    margin-bottom: var(--mb-1-25);
+    margin-bottom: var(--mb-0-25);
 }
 
 .place__button{
