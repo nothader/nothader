@@ -2,25 +2,26 @@
 
 
 :root{
-    /* colors */
     --header-height:3rem;
-    --hue-color: 1;
+
+    /* colors */
     --first-color:  #f25477;
-    --first-color-second: hsl(var(--hue-color), 64%, 22%) ;
+    --first-color-second: #ce506e;
     --first-color-alt:  #ec275f;
+    --rating-color: #e49f44;
+    --facebook-color:#3a5898;
+    --instagram-color:#fe3464;
+    --twitter-color:#55d4fd;
+    --white-color: #fff;
+    --home-info:linear-gradient(to top, #0979b7 0%, #ebf4fc 100%);
+    --hue-color: 1;
     --title-color:hsl(var(--hue-color), 100%, 37%);
     --text-color: hsl(var(--hue-color), 100%, 35%);
     --text-color-light:hsl(var(--hue-color), 99%, 71%);
     --input-color: hsl(var(--hue-color), 24%, 97%);
     --body-color:hsl(var(--hue-color), 100%, 99%);
-    --white-color: #fff;
     --scroll-bar-color:hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
-    --home-info:linear-gradient(to top, #0979b7 0%, #ebf4fc 100%);
-    --rating-color: #e49f44;
-    --facebook-color:#3a5898;
-    --instagram-color:#fe3464;
-    --twitter-color:#55d4fd;
 
 
     /* font-family */
@@ -599,7 +600,38 @@ input{
     width: 100%;
 }
 
-
 .place__card:hover .place__img{
     transform: var(--img-scale);
+}
+
+.subscribe__bg{
+    background-color: var(--first-color-second);
+    padding: 2.5rem 0;
+}
+
+.subscribe__title, .subscribe__description{
+    color:var(--white-color)
+}
+
+.subscribe__description{
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.susbcribe__form{
+    background-color: var(--input-color);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe__input{
+    width: 70%;
+    padding: .5rem;
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+.subscribe__input::placeholder{
+    color: var(--text-color-light);
 }
