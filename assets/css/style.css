@@ -10,15 +10,16 @@
     --first-color-alt:  #ec275f;
     --rating-color: #e49f44;
     --facebook-color:#3a5898;
-    --instagram-color:#fe3464;
+    --instagram-bg: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     --twitter-color:#55d4fd;
+    --youtube-color:#f51c0d;
     --exp-card: #f7e1e4;
     --white-color: #fff;
     --home-info:linear-gradient(to top, #0979b7 0%, #ebf4fc 100%);
     --hue-color: 1;
-    --title-color:hsl(var(--hue-color), 100%, 37%);
-    --text-color: hsl(var(--hue-color), 100%, 35%);
-    --text-color-light:hsl(var(--hue-color), 99%, 71%);
+    --title-color:hsl(var(--hue-color), 100%, 60%);
+    --text-color: hsl(var(--hue-color), 85%, 35%);
+    --text-color-light:hsl(var(--hue-color), 99%, 68%);
     --input-color: hsl(var(--hue-color), 24%, 97%);
     --body-color:hsl(var(--hue-color), 100%, 99%);
     --scroll-bar-color:hsl(var(--hue-color), 12%, 90%);
@@ -297,11 +298,18 @@ input{
 }
 
 #instagram:hover{
-    color:var(--instagram-color);
+    background: var(--instagram-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #twitter:hover{
     color:var(--twitter-color);
+}
+
+#youtube:hover{
+    color: var(--youtube-color);
 }
 
 .home__info{
@@ -740,4 +748,69 @@ input{
 
 .sponsor__content:hover .sponsor__img{ 
     filter: invert(.5);
+}
+
+.footer__container{
+    row-gap: 5rem;
+}
+
+.footer__content{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    row-gap: 2rem;
+}
+
+.footer__title, .footer__subtitle{
+    font-size: var(--h3-font-size);
+}
+
+.footer__title{
+    margin-bottom: var(--mb-0-5);
+}
+
+.footer__description{
+    margin-bottom: var(--mb-2);
+}
+
+.footer__social{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1-25)
+}
+
+.footer__subtitle{
+    margin-bottom: var(--mb-1);
+}
+
+.footer__item{
+    margin-bottom: var(--mb-0-75);
+}
+
+.footer__link{
+    color:var(--text-color);
+}
+
+.footer__link:hover{
+    color:var(--title-color);
+}
+
+.footer__rights{
+    display: flex;
+    flex-direction: column;
+    row-gap:1.5rem;
+    text-align: center;
+}
+
+.footer__copy, .footer__terms-link{
+    font-size: var(--small-font-size);
+    color:var(--text-color-light)
+}
+
+.footer__terms{
+    display: flex;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer__terms-link:hover{
+    color: var(--text-color);
 }
