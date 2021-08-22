@@ -377,6 +377,7 @@ input{
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
     margin-bottom: var(--mb-0-75);
+    color: var(--text-color);
 }
 
 .home__info-button{
@@ -899,5 +900,35 @@ input{
 
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--text-color-light);
+}
+
+@media screen and (max-width:340px) {
+    .place__container{
+        grid-template-columns: max-content;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience__content{
+        padding: 0;
+    }
+
+    .experience__img{
+        grid-template-columns: max-content;
+        padding: 0;
+    }
+
+    .home__info{
+        width: 190px;
+        padding: 1rem;
+    }
+
+    .video__container{
+        padding: 0;
+    }
+
+    .home__social{
+        row-gap: .5rem;
+    }
 }
 
