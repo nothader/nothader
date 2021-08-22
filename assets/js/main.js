@@ -89,6 +89,14 @@ function finalVideo(){
 
 videoFile.addEventListener('ended', finalVideo)
 
+function restartVideo(){
+    videoIcon.classList.remove('ri-restart-line')
+    videoIcon.classList.add('ri-pause-line')
+}
+
+videoButton.addEventListener('click', restartVideo)
+
+
 // SHOW SCROLL UP
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up')
