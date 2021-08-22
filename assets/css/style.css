@@ -42,6 +42,7 @@
     /* font-weight */
     --font-medium: 500;
     --font-semi-bold: 600;
+    --font-bold:700;
 
     /* margin-bottom */
     --mb-0-25:.25rem;
@@ -81,13 +82,16 @@
 /* Dark Theme */
 
 body.dark-theme{
+    --first-color:  #bb8696;
+    --first-color-alt:  #ff7597;
+    --first-color-second: #1F1B24;
+    --input-color:#202124;
+    --body-color:#202124;
+    --exp-card:#ff7597;
     --hue-color: 346;
-    --first-color-second: hsl(var(--hue-color), 41%, 12%);
     --title-color:hsl(var(--hue-color), 24%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --text-color-light:hsl(var(--hue-color), 29%, 71%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color:hsl(var(--hue-color), 29%, 12%);
     --scroll-bar-color:hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
@@ -374,10 +378,11 @@ input{
 
 .home__info-title{
     display: block;
+    font-family: var(--title-font);
     font-size: var(--small-font-size);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-bold);
     margin-bottom: var(--mb-0-75);
-    color: var(--text-color);
+    color: var(--first-color-alt);
 }
 
 .home__info-button{
@@ -548,7 +553,6 @@ input{
     height: 210px;
     margin-bottom: var(--mb-0-25);
     overflow: var(--img-hidden);
-    background: pink;
 }
 
 .experience__overlay, .experience__content-box{
