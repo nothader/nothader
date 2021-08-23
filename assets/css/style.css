@@ -629,7 +629,7 @@ input{
     transition-delay: .3s;
 }
 
-.info-two{
+.info-left{
     transform: translateX(200px);
 }
 
@@ -945,7 +945,7 @@ input{
     }
 
     .place__container{
-        grid-template-columns: repeat( 3, 1fr);
+        grid-template-columns: repeat( 3, max-content);
     }
 
     .susbcribe__form{
@@ -1083,5 +1083,108 @@ input{
     .footer__rights{
         flex-direction: row;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home__container{
+        grid-template-rows: repeat(2fr .5fr);
+    }
+
+    .home__info{
+        width: 328px;
+        grid-template-columns: repeat(1fr 2fr);
+        column-gap: 2rem;
+    }
+
+    .home__info-title{
+        font-size: var(--normal-font-size);
+    }
+
+    .home__info-img{
+        width: 240px;
+    }
+
+    .about__img-one{
+        width: 210px;
+    }
+    
+    .about__img-two{
+        width: 280px;
+    }
+
+    .discover__card{
+        width: 237px;
+    }
+
+    .discover__container{
+        width: 700px;
+    }
+
+    .experience__content{
+        margin-right: var(--mb-1) 0;
+        column-gap: 3.5rem;
+    }
+
+    .discover__data{
+        left: 1.5rem;
+        bottom: 2rem;
+    }
+
+    .discover__title{
+        font-size: var(--h2-font-size);
+    }
+
+    .experience__card{
+        width: 320px;
+    }
+
+    .experience__info{
+        transform: translateX(-320px);
+    }
+    
+    .experience__card:hover .experience__info{
+        transform: translateX(0px);
+        transition-delay: .3s;
+    }
+    
+    .info-left{
+        transform: translateX(320px);
+    }
+
+    .experience__picture{
+        object-position: initial;
+    }
+
+    .video__container{
+        grid-template-columns: .7fr;
+    }
+
+    .video__description{
+        padding:  0 9rem;
+    }
+
+    .place__container{
+        grid-template-columns: repeat(3, max-content);
+        gap: 3rem 2rem;
+    }
+
+    .place__card,.place__img{
+        height: 263px;
+    }
+
+    .footer__content{
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1024px;
     }
 }
