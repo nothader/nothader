@@ -106,13 +106,51 @@ body.dark-theme{
     bottom:4rem;
 }
 
-.change-theme, .change-theme-name{
-    color: var(--text-color);
+.checkbox {
+	opacity: 0;
+	position: absolute;
 }
 
-.change-theme{
-    font-size: 1.5rem;
-    cursor: pointer;
+.label {
+	background-color: var(--first-color-second);
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 16px;
+	width: 30px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color:var(--white-color);
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 1px;
+	height: 12px;
+	width: 12px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+    z-index: 3;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(15px);
+}
+
+.moon-icon, .sun-icon{
+    font-size: .5rem;
+}
+.moon-icon {
+	color: #f1c40f;
+}
+
+.sun-icon {
+	color: #f39c12;
 }
 
 
@@ -217,6 +255,7 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    row-gap: 2rem;
 }
 
 .nav__logo, .nav__toggle{
@@ -234,6 +273,10 @@ input{
 
 .nav__menu{
     position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 @media screen and (max-width:767px){
