@@ -770,7 +770,7 @@ input{
     margin-bottom: var(--mb-2-5);
 }
 
-.susbcribe__form{
+.subscribe__form{
     background-color: var(--input-color);
     padding: .5rem;
     display: flex;
