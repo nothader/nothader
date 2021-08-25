@@ -101,7 +101,7 @@ body.dark-theme{
 }
 
 .home__img.dark-theme{
-    background-image: url(/assets/images/home-t3.jpeg);
+    background-image: url(assets/images/home-2.jpeg);
 }
 
 
@@ -364,7 +364,7 @@ input{
 }
 
 .home__img{
-    background-image: url(/assets/images/home1.jpeg);
+    background-image: url(assets/images/home1.jpeg);
     background-position: center;
     background-size: cover;
     position: absolute;
