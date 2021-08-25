@@ -151,7 +151,7 @@ sr.reveal('.about__img-overlay, .video__content, .subscribe__form',{
     interval: 100,
 })
 
-// DARK LIGHT THEME
+// DARK LIGHT THEME CHECKBOX 
 const chk = document.getElementById('chk');
 const homeImg = document.querySelector('.home__img')
 
@@ -160,7 +160,7 @@ chk.addEventListener('change', () => {
     homeImg.classList.toggle('dark-theme');
 });
 
-//DARK LIGHT THEME TOGGLE FOR DESKTOP
+//DARK LIGHT THEME TOGGLE FOR DESKTOP (BUTTON)
 const themeButton = document.getElementById('theme-button')
 const homeImage = document.querySelector('.home__img')
 const darkTheme = 'dark-theme'
@@ -193,4 +193,5 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+    localStorage.setItem('selected-img', getCurrentImg())
 })
