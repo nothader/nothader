@@ -41,10 +41,16 @@
                 <div class="nav__dark">
                     <input type="checkbox" class="checkbox" id="chk"/>
                     <label class="label" for="chk">
-                        <i class="ri-sun-line sun-icon"></i>
-                        <i class="ri-moon-line moon-icon"></i>
+                        <i class="ri-sun-line change-mode" id="sun-icon"></i>
+                        <i class="ri-moon-line change-mode" id="moon-icon"></i>
                         <div class="ball"></div>
                     </label>
+                </div>
+
+                <div class="nav__dark-desktop">
+                    <!-- Theme change button -->
+                    <!-- <span class="change-theme-name">Dark mode</span> -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
                 </div>
 
                 <i class="ri-close-fill nav__close" id="nav-close"></i> 
@@ -56,7 +62,7 @@
     </header>
     <main class="main">
         <section class="home" id="home">
-            <img src="assets/images/home.jpg" alt="" class="home__img">
+            <div class="home__img"></div>
             <div class="home__container container grid">
                 <div class="home__data">
                     <span class="home__data-subtitle">Discover your place</span>
