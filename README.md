@@ -9,6 +9,16 @@ I started to develop a Responsive Japan Travel Website Design as a creative lear
 * Compatible with all mobile devices
 * Developed using mobile-first approach
 
+## Screenshot
+
+- Light Mode
+![camille846 github io_responsive-travel-website_ (2)](https://user-images.githubusercontent.com/83260908/141381034-c82a61d7-9182-4219-9992-0016ab4ff9d5.png)
+
+
+- Dark Mode
+![camille846 github io_responsive-travel-website_ (1)](https://user-images.githubusercontent.com/83260908/141380929-db500d9a-6b50-4b29-a6a6-aff1b5b5775b.png)
+
+
 ## Built With
 * HTML
 * CSS
